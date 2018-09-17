@@ -12,6 +12,11 @@ class Reporter:
         self.builder = builder
         self.sender = sender
 
-
     def sendReports(self):
-        return len(self.builder.buildReport())
+
+        reports = self.builder.buildReport()
+        if len(reports) == 0:
+            self.sender.send(self.builder.buildSpecialReport())
+        for report in reports:
+            self.sender.send(report)
+        return len(reports)

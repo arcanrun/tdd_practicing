@@ -6,7 +6,7 @@ from app.reportBuilder import ReportBuilder
 
 class ReportBuilderTest(unittest.TestCase):
     def setUp(self):
-        self.data = '#123123!'
+        self.data = (1,2,3,4,5,7)
         self.reportBuilder = ReportBuilder(self.data)
 
     def test_if_method_return_correct_report(self):
@@ -17,7 +17,7 @@ class ReportBuilderTest(unittest.TestCase):
         self.reportBuilder.buildReport()
 
         # assert First_step
-        self.assertEqual(self.reportBuilder.buildReport(), 'Atanttion!The new report: {}'.format(self.data))
+        self.assertEqual(len(self.reportBuilder.buildReport()), 6)
 
     def test_if_method_return_correct_special_report(self):
 

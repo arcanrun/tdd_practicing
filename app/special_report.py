@@ -3,4 +3,4 @@ class SpecialReport:
         self.data = data
 
     def __str__(self):
-        return self.data
+        return str(self.data)

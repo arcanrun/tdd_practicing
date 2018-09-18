@@ -3,10 +3,10 @@ from app.special_report import SpecialReport
 
 
 class ReportBuilder(IreportBuilder):
-    def __init__(self, data=None):
+    def __init__(self, data=[]):
         self.data = data
     def buildReport(self):
-        return 'Atanttion!The new report: {}'.format(self.data)
+        return self.data
 
     def buildSpecialReport(self, data=None):
         return SpecialReport(data)

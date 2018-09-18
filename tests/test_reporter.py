@@ -37,3 +37,4 @@ class ReporterTest(unittest.TestCase):
         self.reporter.sendReports()
         # assert
         self.assertEqual(self.sender.send.mock_calls[0][1][0].__class__.__name__, 'SpecialReport')
+

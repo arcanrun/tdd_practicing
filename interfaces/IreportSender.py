@@ -3,5 +3,5 @@ import abc
 
 class IreportSender(metaclass=abc.ABCMeta):
     @abc.abstractmethod
-    def send(self):
+    def send(self, data):
         pass

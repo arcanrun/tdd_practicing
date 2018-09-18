@@ -1,6 +1,6 @@
 class SpecialReport:
-    def __init__(self):
-        self.name = 'SPECIAL REPORT!'
+    def __init__(self, data=None):
+        self.data = data
 
-    def __repr__(self):
-        return self.name
+    def __str__(self):
+        return self.data

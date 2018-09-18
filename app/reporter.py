@@ -1,6 +1,7 @@
 from interfaces.IreportSender import IreportSender
 from interfaces.IreportBuilder import IreportBuilder
 
+
 class Reporter:
     """
     Reporter controls
